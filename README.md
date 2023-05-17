@@ -1,1 +1,1 @@
-<%@include file="app\src\main\java\com\lanstar\MainActivity.kt"%>
+{5:12}(app/src/main/java/com/lanstar/MainActivity.kt)
