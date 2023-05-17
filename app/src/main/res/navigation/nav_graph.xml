@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/guessFragment"
+        android:name="com.lanstar.game1a2b.GuessFragment"
+        android:label="fragment_guess"
+        tools:layout="@layout/fragment_guess" >
+        <action
+            android:id="@+id/action_guessFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.lanstar.game1a2b.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_guessFragment"
+            app:destination="@id/guessFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.lanstar.game1a2b.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_resultFragment_to_guessFragment"
+            app:destination="@id/guessFragment" />
+        <action
+            android:id="@+id/action_resultFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.lanstar.game1a2b.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_historyFragment_to_stageHistoryFragment"
+            app:destination="@id/stageHistoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stageHistoryFragment"
+        android:name="com.lanstar.game1a2b.StageHistoryFragment"
+        android:label="fragment_stage_history"
+        tools:layout="@layout/fragment_stage_history" >
+        <action
+            android:id="@+id/action_stageHistoryFragment_to_recordHistoryFragment"
+            app:destination="@id/recordHistoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recordHistoryFragment"
+        android:name="com.lanstar.game1a2b.RecordHistoryFragment"
+        android:label="fragment_record_history"
+        tools:layout="@layout/fragment_record_history" />
+</navigation>
