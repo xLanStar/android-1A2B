@@ -1,0 +1,1 @@
+<%@include file="app\src\main\java\com\lanstar\MainActivity.kt"%>
